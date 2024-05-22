@@ -1,2 +1,2 @@
 # StarQuiz
-May 2025 Hacakthon Entry
+May 2024 Hacakthon Entry
