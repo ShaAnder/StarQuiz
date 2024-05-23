@@ -1,12 +1,12 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'base.css' %}" type="text/css" />
     <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css" />
-
 
     <title>{% block title %}Jedi Juggernauts{% endblock %}</title>
 
@@ -20,14 +20,6 @@
       integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
       crossorigin="anonymous"></script>
     -->
-</head>
-<body>
-
-    <div>
-        {% block content %}
-
-        {% endblock %}
-    </div>
-    
-</body>
+  </head>
+    {% block content %} {% endblock %}
 </html>
