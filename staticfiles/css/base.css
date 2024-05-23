@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght&500;700&display=swap");
+
+body {
+  background: rgb(20, 20, 20);
+  overflow: hidden;
+  font-family: "Roboto";
+}
+
+.wrapper {
+    background: rgb(20, 20, 20);
+  display: flex;
+  height: 100%;
+  width: 60%;
+  margin: auto;
+}
