@@ -7,7 +7,6 @@ body {
 }
 
 .wrapper {
-    background: rgb(20, 20, 20);
   display: flex;
   height: 100%;
   width: 60%;
