@@ -163,7 +163,7 @@ p {
   width: 100%;
 }
 
-#to-to-galaxy {
+#go-to-galaxy {
   position: absolute;
   color: #FFE035;
   border: 1px;
@@ -172,7 +172,7 @@ p {
   transform: translate(-50%, -50%);
   z-index:2;
   width: 100%;
-  animation: startAdventure 80s;
+  animation: startAdventure 70s;
 }
 
 

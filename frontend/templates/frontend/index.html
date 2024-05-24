@@ -9,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/title.css' %}">
 {% endblock extra_css %}
 
-  <button onclick={handleShowHidden()} id="startAdventure" >Begin</button>
+  <!-- <button onclick={handleShowHidden()} id="startAdventure" >Begin</button> -->
 
   <audio id="audio-intro" controls autoplay>
     <source src ="{% static 'audio/starwars-intro.mp3'%}" type="audio/mpeg">
@@ -46,9 +46,9 @@
     </div>
   </div>
 
-  <span>
-    <button id="go-to-galaxy" >To Galaxy Map</button>
-  </span>
+
+    <a id="go-to-galaxy" href="galaxy.html">To Galaxy Map</a>
+
 
   {%block js%}
   <script src="{% static 'js/titleInit.js'%}" alt="Star Wars Inspired star quiz scroll screen logo img "></script>
