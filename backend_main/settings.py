@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'allauth.account',
 
     'frontend',
+    'quiz',
 ]
 
 SITE_ID = 1
@@ -96,7 +97,6 @@ LOGGING = {
         },
     }
 }
-
 
 ROOT_URLCONF = 'backend_main.urls'
 

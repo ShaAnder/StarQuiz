@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght&500;700&display=swap");
+
+/* General styles */
+body {
+  font-family: "Roboto";
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+#name-planet{
+    font-size: 2rem;
+    color: #D2B48C;
+    text-align: center;
+    padding-top: 3%;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #D2B48C;
+    text-align: center;
+    padding-top: 3%;
+}
+
+.image-planet {
+    width: 30%;
+    right: 2%;
+    top: 5%;
+    position: absolute;
+}
+
+.info-planet {
+    padding: 4%;
+    margin: 2%;
+    background-color: #000020;
+    position: static;
+    width: 70%;
+}
+
+/* Specific styles for planets */
+.text-tatooine {
+    color: #D2B48C;
+}
+
+.gradient-tatooine {
+    background: linear-gradient(132deg, #8B4513, #D2B48C);
+    max-width: 100%;
+}
+
+.gradient-hoth {
+    background: linear-gradient(to bottom, #e0f7fa, #80deea);
+}
+
+.text-hoth {
+    color: #80deea;
+}
