@@ -1,18 +1,19 @@
 {% extends 'base.html' %} 
 
 {% load static %}
+{% load filters %}
 
-<body>
+
 {% block content %}
 
 {% block extra_css %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/planets.css' %}">
 {% endblock extra_css %}
 
-  <body class="gradient-tatooine">
+  <body class="gradient-{{ planet.name|css_class }}">
     <div>
       <div>
-        <h1 id="name-planet text-tatooine">{{ planet.name }}</h1>
+        <h1 id="name-planet" class="text-{{ planet.name|css_class }}">{{ planet.name }}</h1>
         <img class="image-planet" src="{{ planet.image.url }}" alt="{{ planet.name }}" />
       </div>
       <div class="info-planet">

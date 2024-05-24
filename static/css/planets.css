@@ -46,3 +46,11 @@ h1 {
     background: linear-gradient(132deg, #8B4513, #D2B48C);
     max-width: 100%;
 }
+
+.gradient-hoth {
+    background: linear-gradient(to bottom, #e0f7fa, #80deea);
+}
+
+.text-hoth {
+    color: #80deea;
+}
