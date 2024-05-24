@@ -2,12 +2,22 @@
 
 {% load static %}
 
+
 {% block content %}
 
-  <!-- <button onclick={handleShowHidden()} id="startAdventure" >Begin</button> -->
 
-  <audio id="audio-intro" controls autoplay>
-    <source src ="{% static 'audio/starwars-intro.mp3' %}" type="audio/mpeg">
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/title.css' %}">
+{% endblock extra_css %}
+
+
+<a href="{% includes galaxy.html%}" id="startAdventure" style="display: block;" onclick="showContainer()">
+  Begin
+</a>
+
+<container id="intro-container" style="display: none;">
+  <audio id="audio-intro" controls muted>
+    <source src ="{% static 'audio/starwars-intro.mp3'%}" type="audio/mpeg">
     Your browser does not support the audio tag.
   </audio>
 

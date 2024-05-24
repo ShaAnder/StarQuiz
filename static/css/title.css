@@ -9,6 +9,7 @@ body {
 }
 
 
+
 body::after {
   content: "";
   position:fixed;
@@ -161,6 +162,8 @@ p {
   transform: translate(-50%, -50%);
   z-index:2;
   width: 100%;
+  display: block;
+  cursor: pointer;
 }
 
 #go-to-galaxy {
@@ -193,3 +196,5 @@ p {
   position: absolute;
   z-index: 2;
 }
+
+
