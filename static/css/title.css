@@ -161,7 +161,18 @@ p {
   transform: translate(-50%, -50%);
   z-index:2;
   width: 100%;
-  animation: startAdventure 50s;
+}
+
+#to-to-galaxy {
+  position: absolute;
+  color: #FFE035;
+  border: 1px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index:2;
+  width: 100%;
+  animation: startAdventure 80s;
 }
 
 
@@ -176,4 +187,9 @@ p {
   100% {
     opacity: 1;
   }
+}
+
+#audio-intro {
+  position: absolute;
+  z-index: 2;
 }
