@@ -17,3 +17,12 @@ class Character(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Trivia(models.Model):
+    planet = models.ForeignKey(Planet, related_name='trivia', on_delete=models.CASCADE)
+    question = models.CharField(max_length=255)
+    answer = models.CharField(max_length=255)
+
+    def __str__(self):
+        return f'Trivia for {self.planet.name}'
