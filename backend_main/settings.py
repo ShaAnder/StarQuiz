@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = 'DEBUG' in os.environ
 
 ALLOWED_HOSTS = ['*']
 
@@ -65,6 +65,7 @@ MIDDLEWARE = [
     "allauth.account.middleware.AccountMiddleware",
 ]
 
+"""
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -97,6 +98,7 @@ LOGGING = {
         },
     }
 }
+"""
 
 ROOT_URLCONF = 'backend_main.urls'
 
