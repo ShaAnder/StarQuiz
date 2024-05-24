@@ -4,6 +4,9 @@ from .models import Planet
 def index(request):
     return render(request, 'frontend/index.html')
 
+def intro(request):
+    return render(request, 'frontend/intro.html')
+
 def galaxy_map(request):
     planets = Planet.objects.all()
     return render(request, 'frontend/galaxy.html', {'planets': planets})

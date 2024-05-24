@@ -26,3 +26,23 @@ window.onload = function() {
     var backgroundAudio=document.getElementById("audio-intro");
     backgroundAudio.volume=0.1;
 }
+
+// let link = document.querySelector("#startAdventure").addEventListener("click", function() {
+//     let start = document.getElementById()
+    
+// })
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    let start = document.getElementById("startAdventure")
+    let reveal = document.getElementById("intro-container")
+    start.addEventListener("click", function() {
+        if (reveal.style.display === "none") {
+            reveal.style.display = "block"
+            start.style.display = "none"
+        }
+    })
+})
+
+
+
