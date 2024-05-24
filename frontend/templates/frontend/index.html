@@ -2,6 +2,7 @@
 
 {% load static %}
 
+
 {% block content %}
 
 
@@ -9,9 +10,13 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/title.css' %}">
 {% endblock extra_css %}
 
-  <!-- <button onclick={handleShowHidden()} id="startAdventure" >Begin</button> -->
 
-  <audio id="audio-intro" controls autoplay>
+<a href="{% includes galaxy.html%}" id="startAdventure" style="display: block;" onclick="showContainer()">
+  Begin
+</a>
+
+<container id="intro-container" style="display: none;">
+  <audio id="audio-intro" controls muted>
     <source src ="{% static 'audio/starwars-intro.mp3'%}" type="audio/mpeg">
     Your browser does not support the audio tag.
   </audio>
@@ -45,11 +50,8 @@
       </p>
     </div>
   </div>
-
-
-    <a id="go-to-galaxy" href="galaxy.html">To Galaxy Map</a>
-
-
+  </container>
+  <!-- <a id="go-to-galaxy" href="{{ galaxy.html}}">To Galaxy Map</a> -->
   {%block js%}
   <script src="{% static 'js/titleInit.js'%}" alt="Star Wars Inspired star quiz scroll screen logo img "></script>
   {%endblock js%}
