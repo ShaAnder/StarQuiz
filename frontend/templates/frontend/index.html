@@ -4,15 +4,10 @@
 
 {% block content %}
 
-
-{% block extra_css %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/title.css' %}">
-{% endblock extra_css %}
-
   <!-- <button onclick={handleShowHidden()} id="startAdventure" >Begin</button> -->
 
   <audio id="audio-intro" controls autoplay>
-    <source src ="{% static 'audio/starwars-intro.mp3'%}" type="audio/mpeg">
+    <source src ="{% static 'audio/starwars-intro.mp3' %}" type="audio/mpeg">
     Your browser does not support the audio tag.
   </audio>
 
@@ -47,7 +42,7 @@
   </div>
 
 
-    <a id="go-to-galaxy" href="galaxy.html">To Galaxy Map</a>
+    <!--  <a id="go-to-galaxy" href="galaxy.html">To Galaxy Map</a> -->
 
 
   {%block js%}
