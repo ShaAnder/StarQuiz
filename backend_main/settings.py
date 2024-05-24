@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'allauth.account',
 
     'frontend',
+    'quiz',
 ]
 
 SITE_ID = 1
