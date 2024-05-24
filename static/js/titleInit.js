@@ -21,3 +21,8 @@ function randomPosition() {
     return [randomX, randomY]
 }
 
+
+window.onload = function() {
+    var backgroundAudio=document.getElementById("audio-intro");
+    backgroundAudio.volume=0.1;
+}

@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-    <html lang="en-US">
+{% extends 'base.html' %} 
 
-        <head>
-            <meta charset="UFT-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <link rel="stylesheet" href="css/Galaxymap.css" type="text/css">
+{% load static %}
 
-            <title>Galaxy Map</title>
-        </head>
-        <body>
+{% block content %}
             <header id="g-home">
                 <h1>Galaxy Map</h1>
                 <p>The world of StarWars awaites you padawan</p>
@@ -204,8 +198,4 @@
                         </form>
                 </div>
             </section>
-            <footer>
-                <!--insert footer text-->
-            </footer>
-    </body>
-</html>
+{% endblock %}
