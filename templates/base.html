@@ -1,28 +1,56 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css" />
-    
-    {% block extra_css %}
-      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
-      <link rel="stylesheet" type="text/css" href="{% static 'css/title.css' %}" />
-    {% endblock extra_css %}
 
-    <title>{% block title %}Jedi Juggernauts{% endblock %}</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css" />
 
-    <!-- TailwindCSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  {% block extra_css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/title.css' %}" />
+  {% endblock extra_css %}
 
-    <!--
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+  <title>{% block title %}Jedi Juggernauts{% endblock %}</title>
+
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <!--
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
       crossorigin="anonymous"></script>
     -->
-  </head>
-    {% block content %} {% endblock %}
+</head>
+
+<body>
+  <header>
+
+    <div class="w-100 bg-light">
+      <ul class="navbar-nav">
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'account_signup' %}">Signup</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+        </li>
+      </ul>
+    </div>
+
+  </header>
+
+  {% block content %} {% endblock %}
+
 </html>
