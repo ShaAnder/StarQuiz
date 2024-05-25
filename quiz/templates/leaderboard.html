@@ -5,4 +5,5 @@
     {% for quiz in quizzes %}
     <li>{{ quiz.user.username }} - {{ quiz.score }}</li>
     {% endfor %}
+    <a href="{% url 'quiz' %}">Take the Quiz Again</a>
 </ul>

@@ -1,9 +1,10 @@
 from django import forms
-from frontend.models import Trivia
 
 class QuizForm(forms.Form):
+    answer = forms.CharField(label='Your Answer', max_length=100)
+
     def __init__(self, *args, **kwargs):
+        question = kwargs.pop('question', None)
         super(QuizForm, self).__init__(*args, **kwargs)
-        questions = Trivia.objects.all()
-        for question in questions:
-            self.fields[f'question_{question.id}'] = forms.CharField(label=question.question)
+        if question:
+            self.fields['answer'].label = question.question
