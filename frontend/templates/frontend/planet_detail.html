@@ -6,10 +6,6 @@
 
 {% block content %}
 
-{% block extra_css %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/planets.css' %}">
-{% endblock extra_css %}
-
   <body class="gradient-{{ planet.name|css_class }}">
     <div>
       <div class="speech speech-{{ planet.name|css_class }}">
