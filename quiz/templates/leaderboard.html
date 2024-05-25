@@ -1,0 +1,8 @@
+
+
+<h1>Leaderboard</h1>
+<ul>
+    {% for quiz in quizzes %}
+    <li>{{ quiz.user.username }} - {{ quiz.score }}</li>
+    {% endfor %}
+</ul>
