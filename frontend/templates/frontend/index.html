@@ -9,13 +9,13 @@
 {% endblock extra_css %}
 
 
-<a href="" id="startAdventure" style="display: block;" onclick="showContainer()">
-  Begin
-</a>
+<div >
+  <a id="startAdventure" style="text-align: center;" href="{% url 'intro' %}">Begin</a>
+</div>
 
-  {%block js%}
-  <script src="{% static 'js/titleInit.js'%}" alt="Star Wars Inspired star quiz scroll screen logo img "></script>
-  {%endblock js%}
+{%block js%}
+<script src="{% static 'js/titleInit.js'%}" alt="Star Wars Inspired star quiz scroll screen logo img "></script>
+{%endblock js%}
 {% endblock %}
 
 

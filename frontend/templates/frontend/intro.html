@@ -7,8 +7,7 @@
 {% block extra_css %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/title.css' %}">
 {% endblock extra_css %}
-<container id="intro-container" style="display: none;">
-    <audio id="audio-intro" controls muted>
+    <audio id="audio-intro" style="display: none;" controls autoplay>
       <source src ="{% static 'audio/starwars-intro.mp3'%}" type="audio/mpeg">
       Your browser does not support the audio tag.
     </audio>
@@ -42,8 +41,8 @@
         </p>
       </div>
     </div>
-    </container>
-    <!-- <a id="go-to-galaxy" href="{{ galaxy.html}}">To Galaxy Map</a> -->
+
+    <a id="go-to-galaxy" style="text-align: center;" href="{% url 'galaxy_map'%}">To Galaxy Map</a>
 
 {%block js%}
 <script src="{% static 'js/titleInit.js'%}" alt="Star Wars Inspired star quiz scroll screen logo img "></script>
