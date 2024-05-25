@@ -153,31 +153,6 @@ p {
   font-size: 3.5rem;
 }
 
-#startAdventure {
-  position: absolute;
-  color: #FFE035;
-  border: 1px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index:2;
-  width: 100%;
-  display: block;
-  cursor: pointer;
-}
-
-#go-to-galaxy {
-  position: absolute;
-  color: #FFE035;
-  border: 1px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index:2;
-  width: 100%;
-  animation: startAdventure 70s;
-}
-
 
 @keyframes startAdventure {
   0% {
@@ -195,6 +170,27 @@ p {
 #audio-intro {
   position: absolute;
   z-index: 2;
+  background-color: black;
 }
 
+#go-to-galaxy {
+  position: absolute;
+  color: #FFE035;
+  border: 1px;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index:2;
+  width: 100%;
+  animation: startAdventure 60s;
+}
 
+#startAdventure {
+  position: absolute;
+  color: #FFE035;
+  border: 1px;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index:2;
+  width: 100%;
+ 
+}
