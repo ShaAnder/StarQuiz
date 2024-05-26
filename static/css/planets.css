@@ -1,25 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght&500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 
 /* General styles */
 body {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   color: white;
-  height: max-content;
+  overflow: auto;
+  max-width: 100%;
 }
 
-#name-planet {
-  font-size: 2rem;
-  text-align: center;
-  padding-top: 3%;
-}
-
+/* titles */
 h1 {
   font-size: 2rem;
-  color: #d2b48c;
   text-align: center;
   padding-top: 3%;
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  padding-top: 2%;
+  font-weight: bold;
 }
 
 .planet {
@@ -29,31 +33,41 @@ h1 {
   z-index: 2;
 }
 
+/* images for planet */
 .image-planet {
-  width: 40%;
+  width: 60%;
   left: 2%;
   left: 0%;
   position: absolute;
   margin-bottom: 10%;
 }
 
-.info-planet {
+/* bloc with description and bio */
+.info {
   display: block;
   padding: 4%;
   margin: 10% 2% 10% 2%;
-  position: absolute;
   max-width: 100%;
 }
 
-.text-planet {
-  top: 5%;
-}
-
+/* images for characters */
 .image-character {
   width: 40%;
   right: 2%;
   top: 2%;
   position: absolute;
+}
+
+/* Return button to quit the page */
+.button-return {
+  position: relative;
+  margin: 2%;
+  padding: 2%;
+  transform: translateX(-50%);
+  background: #000;
+  font-size: 0.8rem;
+  cursor: pointer;
+  left: 50%;
 }
 
 /* Styles for speech bubble */
