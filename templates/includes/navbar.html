@@ -7,11 +7,12 @@
             </a>
         </div>
         <ul class="flex space-x-4">
-            <li><a href="{% url 'home' %}" class="text-white font-bold:text-yellow-300">Home</a></li>
-            <li><a href="{% url 'quiz' %}" class="text-white font-bold hover:text-yellow-300">Quiz</a></li>
+            <li><a href="{% url 'home' %}" class="text-white font-bold hover:text-yellow-300">Home</a></li>
             <li><a href="{% url 'galaxy_map' %}" class="text-white font-bold hover:text-yellow-300">Galaxy</a></li>
+            <li><a href="{% url 'quiz' %}" class="text-white font-bold hover:text-yellow-300">Quiz</a></li>
+            <li><a href="{% url 'leaderboard' %}" class="text-white font-bold hover:text-yellow-300">Leaderboard</a></li>
             {% if user.is_authenticated %}
-                <li><a href="{% url 'account_logout' %}" class="text-white font-bold :text-yellow-300">Logout</a></li>
+                <li><a href="{% url 'account_logout' %}" class="text-white font-bold hover:text-yellow-300">Logout</a></li>
             {% else %}
                 <li><a href="{% url 'account_signup' %}" class="text-white font-bold hover:text-yellow-300">Sign Up</a></li>
                 <li><a href="{% url 'account_login' %}" class="text-white font-bold hover:text-yellow-300">Login</a></li>

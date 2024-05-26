@@ -1,31 +1,39 @@
-{% extends "account/base.html" %}
-{% load allauth i18n %}
+{% extends "base.html" %}
+{% load i18n %}
+{% load allauth account %}
+{% load static %}
+
 {% block head_title %}
-{% trans "Sign Out" %}
+    {% trans "Sign In" %}
 {% endblock head_title %}
-{% block allauth %}
-{% element h1 %}
-{% trans "Sign Out" %}
-{% endelement %}
-{% setvar link %}
-<a href="{{ logout_url }}">
-    {% endsetvar %}
-    {% setvar end_link %}
-</a>
-{% endsetvar %}
-{% element p %}
-{% trans 'Are you sure you want to sign out?' %}
-{% endelement %}
-{% url 'account_logout' as action_url %}
-{% element form method="post" action=action_url no_visible_fields=True %}
-{% slot body %}
-{% csrf_token %}
-{{ redirect_field }}
-{% endslot %}
-{% slot actions %}
-{% element button type="submit" %}
-{% trans 'Sign Out' %}
-{% endelement %}
-{% endslot %}
-{% endelement %}
-{% endblock %}
+
+{% block content %}
+{% include 'includes/navbar.html' %}
+<div class="container mt-10">
+    <div class="flex justify-center">
+        <div class="w-full max-w-md">
+            <div class="bg-opacity-50 bg-gray-900 shadow-lg rounded px-8 pt-6 pb-8 mb-4 neon-border">
+                <h1 class="text-3xl font-extrabold uppercase text-center mb-6 text-yellow-500">{% trans "Sign Out" %}</h1>
+                <p class="text-center mb-6 text-yellow-300">{% trans 'Sure you are, sign out you want?' %}</p>
+                {% url 'account_logout' as action_url %}
+                <form method="post" action="{{ action_url }}">
+                    {% csrf_token %}
+                    {% if redirect_field_value %}
+                        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
+                    {% endif %}
+                    <div class="flex items-center justify-center">
+                        <button class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                            {% trans 'Sign Out' %}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block js %}
+    <script src="{% static 'js/account.js' %}"></script>
+{% endblock js %}
+
+{% endblock content %}
