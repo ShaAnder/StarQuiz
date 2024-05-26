@@ -7,9 +7,18 @@ body {
 }
 
 .wrapper {
-    background: rgb(20, 20, 20);
+  background: rgb(20, 20, 20);
   display: flex;
   height: 100%;
   width: 60%;
   margin: auto;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  height: 30px;
+  background-color: white;
+  width: 100%;
+  z-index: 10;
 }
