@@ -24,4 +24,5 @@ urlpatterns = [
     path('', include('frontend.urls')),
     path('quiz/', include('quiz.urls')),
     path('accounts/', include('allauth.urls')),
+    path("__reload__/", include("django_browser_reload.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

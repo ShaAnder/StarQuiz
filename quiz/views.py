@@ -34,7 +34,7 @@ def quiz(request):
 
     form = QuizForm(question=question)
 
-    return render(request, 'quiz.html', {'form': form, 'question': question})
+    return render(request, 'quiz/quiz.html', {'form': form, 'question': question})
 
 def save_quiz(user, score):
     quiz = Quiz(user=user, score=score)
@@ -42,9 +42,9 @@ def save_quiz(user, score):
 
 @login_required
 def quiz_result(request, score):
-    return render(request, 'quiz_result.html', {'score': score})
+    return render(request, 'quiz/quiz_result.html', {'score': score})
 
 @login_required
 def leaderboard(request):
     quizzes = Quiz.objects.order_by('-score')[:10]
-    return render(request, 'leaderboard.html', {'quizzes': quizzes})
+    return render(request, 'quiz/leaderboard.html', {'quizzes': quizzes})
