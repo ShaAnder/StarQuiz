@@ -19,7 +19,7 @@
 
   }
 
-  .galaxy-container {
+.galaxy-container {
     position: relative;
     width: 100%;
     height: 800px;
@@ -27,4 +27,9 @@
 .planet-item {
     position: absolute;
 } 
+}
+
+#galaxy-header {
+  position: static;
+  height: auto;
 }
