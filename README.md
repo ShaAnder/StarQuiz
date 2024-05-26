@@ -19,22 +19,22 @@ For [Code Institue](https://codeinstitute.net/) 's May Hackathon theme, Star War
 
 ### About this project
 
-![](star-wars-quiz.png) ![](text.png)
+![](static/img/readme/star-wars-quiz.png) ![](static/img/readme/text.png)
 This is a fun interactive quiz where users get to experience the many planets of Luke Skywalker's journey through Star Wars Four, Five, and Six and test their knowledge of that historical journey.
 
 ### Characters
 
-- Luke Skywalker![](luke.png)
-- Princess Leia![](leia.png)
-- Han Solo![](hansSolo.png)
-- Chewbacca![](chewy.png)
-- C-3PO![](c3PO.png)
-- R2-D2![](R2D2.png)
-- Obi-Wan Kenobi![](obiWan.png)
-- Yoda![](yoda.png)
-- Lando Calrissian![](Landonis.png)
-- Darth Vader![](darth-vader.png)
-- Ewok![](ewok.png)
+- Luke Skywalker![](static/img/readme/luke.png)
+- Princess Leia![](static/img/readme/leia.png)
+- Han Solo![](static/img/readme/hansSolo.png)
+- Chewbacca![](static/img/readme/chewy.png)
+- C-3PO![](static/img/readme/c3PO.png)
+- R2-D2![](static/img/readme/R2D2.png)
+- Obi-Wan Kenobi![](static/img/readme/obiWan.png)
+- Yoda![](static/img/readme/yoda.png)
+- Lando Calrissian![](static/img/readme/Landonis.png)
+- Darth Vader![](static/img/readme/darth-vader.png)
+- Ewok![](static/img/readme/ewok.png)
 
 ### Live Link
 
@@ -73,4 +73,4 @@ GitHub - [Beth Cottel](https://github.com/BeeBeeBethC)
 
 LinkedIn - [Cecile Gaudron](https://www.linkedin.com/in/cecilegaudron/?locale=en_US)
 
-GitHub - [SamAtkinsonModeste](https://www.github.com/SamAtkinsonModeste)
+GitHub - [Sam Atkinson Modeste](https://www.github.com/SamAtkinsonModeste)
