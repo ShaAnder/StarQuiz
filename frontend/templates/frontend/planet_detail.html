@@ -35,6 +35,20 @@
         </div>
       </div>
       {% endfor %}
+
+      <div class="info info-{{ planet.name|css_class }} rounded-lg">
+        <div class="text-{{ planet.name|css_class }} top-5">
+            <h2 class="uppercase">Trivia</h2>
+            <ul>
+                {% for item in trivia %}
+                <li>
+                    <strong>Q:</strong> {{ item.question }}<br>
+                    <strong>A:</strong> {{ item.answer }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
       <button class="button-return rounded-lg content-center">
         <a href="{% url 'galaxy_map'%}" onclick="checkVisited()">return to galaxy</a>
       </button>
