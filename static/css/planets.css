@@ -2,8 +2,8 @@
 
 
 /* General styles */
-body {
-  font-family: "Roboto", sans-serif;
+.plant-detail-container {
+  font-family: "Roboto";
   margin: 0;
   padding: 0;
   color: white;

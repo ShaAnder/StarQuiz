@@ -4,18 +4,14 @@
 
 {% block content %}
 
-{% block extra_css %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/title.css' %}">
-{% endblock extra_css %}
+  <div>
+    <a id="startAdventure" style="text-align: center;" href="{% url 'intro' %}">Begin</a>
+  </div>
 
+  {%block js%}
+    <script src="{% static 'js/titleInit.js'%}" alt="Star Wars Inspired star quiz scroll screen logo img "></script>
+  {%endblock js%}
 
-<div >
-  <a id="startAdventure" style="text-align: center;" href="{% url 'intro' %}">Begin</a>
-</div>
-
-{%block js%}
-<script src="{% static 'js/titleInit.js'%}" alt="Star Wars Inspired star quiz scroll screen logo img "></script>
-{%endblock js%}
 {% endblock %}
 
 

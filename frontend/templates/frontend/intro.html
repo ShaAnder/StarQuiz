@@ -4,49 +4,52 @@
 
 {% block content %}
 
-{% block extra_css %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/title.css' %}">
-{% endblock extra_css %}
-    <audio id="audio-intro" style="display: none;" controls autoplay>
-      <source src ="{% static 'audio/starwars-intro.mp3'%}" type="audio/mpeg">
-      Your browser does not support the audio tag.
-    </audio>
-  
-    <section class ="intro" style="text-align: center;">
-      A few days ago, in a slack channel not so far, far away....
-    </section>
-    <section class="logo">
-      <img src="{% static 'img/starquiz.png' %}">
-    </section>
-    <div id="scroller">
-      <div id="content">
-        <p id="title">Episode IV</p>
-        <p id="subtitle">Team 5 Does The Hackathon</p>
-        <br>
-        <p>The theme, Star Wars, the mission, to create a fun and
-          engaging quiz based app, our team sets out to create an 
-          interactive map of episodes IV, V and VI documenting 
-          Luke Skywalkers harrowing adventures through space with 
-          his friends. 
-          <br>
-          <br>
-          What will we find, interesting trivia? Fun facts? Detailed
-          plot points of the movies? Who only knows but it's in your 
-          hands to search all of our planets, gather your knowledge
-          and overcome the final challenge! 
-          <br>
-          <br>
-          Test your love and knowledge of starwars in this interactive
-          app created for the may 22nd Code Institute hackathon!
-          <br>
-          <br>
-          Created by: ShaAnder, Joha Wilson, Teo_alina, 
-          Paul Hughes, Beth Cottell, Cecile Gaudron and Sam Atkinson
-        </p>
-      </div>
-    </div>
+<div class="title-container">
 
-    <a id="go-to-galaxy" style="text-align: center;" href="{% url 'galaxy_map'%}">To Galaxy Map</a>
+  <audio id="audio-intro" style="display: none;" controls autoplay>
+    <source src="{% static 'audio/starwars-intro.mp3'%}" type="audio/mpeg">
+    Your browser does not support the audio tag.
+  </audio>
+
+  <section class="intro" style="text-align: center;">
+    A few days ago, in a slack channel not so far, far away....
+  </section>
+
+  <section class="logo">
+    <img src="{% static 'img/starquiz.png' %}">
+  </section>
+
+  <div id="scroller">
+    <div id="content">
+      <p id="title">Episode IV</p>
+      <p id="subtitle">Team 5 Does The Hackathon</p>
+      <br>
+      <p>The theme, Star Wars, the mission, to create a fun and
+        engaging quiz based app, our team sets out to create an
+        interactive map of episodes IV, V and VI documenting
+        Luke Skywalkers harrowing adventures through space with
+        his friends.
+        <br>
+        <br>
+        What will we find, interesting trivia? Fun facts? Detailed
+        plot points of the movies? Who only knows but it's in your
+        hands to search all of our planets, gather your knowledge
+        and overcome the final challenge!
+        <br>
+        <br>
+        Test your love and knowledge of starwars in this interactive
+        app created for the may 22nd Code Institute hackathon!
+        <br>
+        <br>
+        Created by: ShaAnder, Joha Wilson, Teo_alina,
+        Paul Hughes, Beth Cottell, Cecile Gaudron and Sam Atkinson
+      </p>
+    </div>
+  </div>
+
+  <a id="go-to-galaxy" style="text-align: center;" href="{% url 'galaxy_map'%}">To Galaxy Map</a>
+
+</div>
 
 {%block js%}
 <script src="{% static 'js/titleInit.js'%}" alt="Star Wars Inspired star quiz scroll screen logo img "></script>

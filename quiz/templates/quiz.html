@@ -1,7 +1,24 @@
+{% extends 'base.html' %}
 
-<h1>{{ question.question }}</h1>
-<form method="post" action="{% url 'quiz' %}">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Submit Answer</button>
-</form>
+{% load static %}
+ 
+{% block content %}
+ 
+<div class="quiz-container bg-slate-200">
+        
+    <div class="">
+        <div class="">
+            <div class="">
+                <h1>{{ question.question }}</h1>
+                <form method="post" action="{% url 'quiz' %}">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Submit Answer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+ 
+</div>
+ 
+{% endblock %}
