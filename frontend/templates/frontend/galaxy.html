@@ -9,6 +9,16 @@
     <header id="galaxy header">
         <h1>Galaxy Map</h1>
         <p>The world of StarWars awaites you padawan</p>
+        <ul>
+            {% for planet in planets %}
+                <li>
+                    <a href="{% url 'planet_detail' planet.id %}">
+                        <img src="{{ planet.image.url }}" alt="{{ planet.name }}" style="width:100px;height:100px;">
+                        {{ planet.name }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
     </header>
 
     <hr>
