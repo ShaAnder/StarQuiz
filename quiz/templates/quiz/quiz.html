@@ -4,21 +4,21 @@
  
 {% block content %}
  
-<div class="quiz-container bg-slate-200">
-        
-    <div class="">
-        <div class="">
-            <div class="">
-                <h1>{{ question.question }}</h1>
-                <form method="post" action="{% url 'quiz' %}">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button type="submit">Submit Answer</button>
-                </form>
-            </div>
+    <div class="quiz-container">
+
+        <div class="text-center p-5 border-yellow-300 border-8 w-1/2 m-auto my-auto">
+
+            <h1 class="text-yellow-300 text-3xl">{{ question.question }}</h1>
+            <form method="post" action="{% url 'quiz' %}">
+                {% csrf_token %}
+                
+                {{ form.as_p }}
+
+                <br><br>
+                <button class="text-black p-3 rounded-md bg-yellow-300" type="submit">Submit Answer</button>
+            </form>
         </div>
+
     </div>
- 
-</div>
- 
+
 {% endblock %}

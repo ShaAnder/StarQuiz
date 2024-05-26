@@ -2,10 +2,15 @@
 module.exports = {
   content: [
 
-    './frontend/templates/frontend/**/*.{galaxy.html, index.html, intro.html, planet_detail.html}',
-    './quiz/templates/quiz/**/*.{leaderboard.html, quiz_result.html, quiz.html}',
+    './frontend/templates/frontend/**/*galaxy.html',
+    './frontend/templates/frontend/**/*planet_detail.html',
+    './frontend/templates/frontend/**/*intro.html',
+    './frontend/templates/frontend/**/*index.html',
+    './quiz/templates/quiz/**/*quiz.html',
+    './quiz/templates/quiz/**/*quiz_result.html',
+    './quiz/templates/quiz/**/*leaderboard.html',
     './templates/**/*base.html',
-
+    './templates/includes/**/*navbar.html',
   ],
   theme: {
     extend: {},
