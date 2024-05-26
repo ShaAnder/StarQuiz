@@ -104,7 +104,7 @@ h2 {
     background: linear-gradient(45deg, #4682B4, #6B8E23);
 }
 
-.gradient-yavin {
+.gradient-yavin4 {
     background: linear-gradient(45deg, #A9A9A9, #6B8E23);
 }
 
@@ -125,7 +125,7 @@ h2 {
   color: #8b4513;
 }
 
-.text-hoth, .text-yavin {
+.text-hoth, .text-yavin4 {
   color: #f0f8ff;
 }
 
@@ -146,12 +146,12 @@ h2 {
 }
 
 /* Specific styles for planets speech bubbles */
-.speech-hoth, .info-hoth, .speech-yavin,
-.info-yavin {
+.speech-hoth, .info-hoth, .speech-yavin4,
+.info-yavin4 {
   background: #4682b4;
 }
 
-.speech-hoth:before, .speech-yavin:before {
+.speech-hoth:before, .speech-yavin4:before {
   border-left: 20px solid #4682b4;
   border-top: 20px solid #4682b4;
 }
