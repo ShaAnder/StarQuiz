@@ -188,13 +188,13 @@
 
   #startAdventure {
     position: absolute;
-    color: #FFE035;
     border: 1px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
     width: 100%;
+    font-size: x-large;
   }
 
   #audio-intro {
