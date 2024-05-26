@@ -1,48 +1,59 @@
-{% extends "account/base.html" %}
+{% extends "base.html" %}
 {% load i18n %}
 {% load allauth account %}
+{% load static %}
+
 {% block head_title %}
-{% trans "Sign In" %}
+    {% trans "Sign In" %}
 {% endblock head_title %}
-{% block allauth %}
-{% element h1 %}
-{% trans "Sign In" %}
-{% endelement %}
-{% if not SOCIALACCOUNT_ONLY %}
-{% setvar link %}
-<a href="{ login_url }">
-    {% endsetvar %}
-    {% setvar end_link %}
-</a>
-{% endsetvar %}
-{% element p %}
-If you have not created an account yet, then please {{ link }}sign up{{ end_link }} first.
-{% endelement %}
-{% url 'account_login' as login_url %}
-{% element form form=form method="post" action=login_url tags="entrance,login" %}
-{% slot body %}
-{% csrf_token %}
-{% element fields form=form unlabeled=True %}
-{% endelement %}
-{{ redirect_field }}
-{% endslot %}
-{% slot actions %}
-{% element button type="submit" tags="prominent,login" %}
-{% trans "Sign In" %}
-{% endelement %}
-{% endslot %}
-{% endelement %}
-{% endif %}
-{% if LOGIN_BY_CODE_ENABLED %}
-{% element hr %}
-{% endelement %}
-{% element h2 %}
-{% element button href=request_login_code_url tags="prominent,login,secondary" %}
-{% trans "Mail me a sign-in code" %}
-{% endelement %}
-{% endelement %}
-{% endif %}
-{% if SOCIALACCOUNT_ENABLED %}
-{% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
-{% endif %}
-{% endblock %}
+
+{% block content %}
+{% include 'includes/navbar.html' %}
+<div class="container mx-auto mt-10">
+    <div class="flex justify-center">
+        <div class="w-full max-w-md">
+            <div class="bg-opacity-50 bg-gray-900 shadow-lg rounded px-8 pt-6 pb-8 mb-4 neon-border">
+                <h1 class="text-3xl font-extrabold uppercase text-center mb-6 text-yellow-500">{% trans "Sign In" %}</h1>
+                <p class="text-center mb-6 text-yellow-300">
+                    {% blocktrans %}If an account yet, not created you have, then please <a href="{{ signup_url }}" class="text-yellow-500 hover:underline">sign up</a> first.{% endblocktrans %}
+                </p>
+                {% url 'account_login' as login_url %}
+                <form method="post" action="{{ login_url }}">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        {% if field.name != 'remember' %}
+                            <div class="mb-4">
+                                <label class="block text-yellow-300 text-sm font-bold mb-2" for="{{ field.id_for_label }}">
+                                    {{ field.label_tag }}{{ field.label_suffix }}
+                                </label>
+                                <div>
+                                    {{ field }}
+                                    {% if field.help_text %}
+                                        <p class="text-xs text-yellow-400">{{ field.help_text }}</p>
+                                    {% endif %}
+                                    {% for error in field.errors %}
+                                        <p class="text-red-500 text-xs italic">{{ error }}</p>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    {% if redirect_field_value %}
+                        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
+                    {% endif %}
+                    <div class="flex items-center justify-center">
+                        <button class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                            {% trans "Sign In" %}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block js %}
+    <script src="{% static 'js/account.js' %}"></script>
+{% endblock js %}
+
+{% endblock content %}
