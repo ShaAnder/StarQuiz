@@ -9,9 +9,14 @@
   <div class="plant-detail-container gradient-{{ planet.name|css_class }}">
     <div>
       <div class="speech speech-{{ planet.name|css_class }}">
+<<<<<<< HEAD
 
         <h1 id="name-planet" class="text-{{ planet.name|css_class }}">Welcome to<br>
           {{ planet.name }}
+=======
+        <h1 class="text-{{ planet.name|css_class }}">Welcome to<br>
+          <div class="uppercase font-bold">{{ planet.name }}</div>
+>>>>>>> 351e74ccb11486ffa3066e4312b848cb0ab0d6d4
         </h1>
 
         <img class="image-planet" src="{{ planet.image.url }}" alt="{{ planet.name }}" />
@@ -19,17 +24,35 @@
       </div>
 
       <div>
-        <img class="image-character" src="{{ character.image.url }}" alt="{{ character.name }}" />
+        <img class="image-character" src="{{ planet.characters.image.url }}" alt="{{ characters.name }}" />
       </div>
+<<<<<<< HEAD
 
       <div class="info-planet info-{{ planet.name|css_class }} rounded-lg">
         <div class="text-planet text-{{ planet.name|css_class }}">
           <h2>About {{ planet.name }}</h2>
+=======
+      <div class="info info-{{ planet.name|css_class }} rounded-lg">
+        <div class="text-{{ planet.name|css_class }} top-5">
+          <h2 class="uppercase">About {{ planet.name }}</h2>
+>>>>>>> 351e74ccb11486ffa3066e4312b848cb0ab0d6d4
           <p>{{ planet.description }}</p>
         </div>
       </div>
+      <div class="info info-{{ planet.name|css_class }} rounded-lg">
+        <div class="text-{{ planet.name|css_class }} top-5">
+          <h2 class="uppercase">Who is {{ planet.characters.name }}</h2>
+          <p>{{ planet.characters.bio }}</p>
+        </div>
+      </div>
+      <button class="button-return rounded-lg content-center">
+        <a href="{% url 'galaxy_map'%}" onclick="checkVisited()">return to galaxy</a>
+      </button>
     </div>
 
+<<<<<<< HEAD
     <a href="{% url 'galaxy_map'%}" onclick="checkVisited()">return to galaxy</a>
   </div>
+=======
+>>>>>>> 351e74ccb11486ffa3066e4312b848cb0ab0d6d4
 {% endblock %}
