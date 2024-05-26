@@ -1,0 +1,25 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+ 
+{% block content %}
+ 
+<div class="container ">
+        
+    <div class="card-columns p-10 m-10" ">
+        <div class="w-3 flex items-center border-4 border-black">
+            <div class="card-body">
+                <h5 class="card-title"> Your Score: {{score}}</h5>
+                <p>Thank you for taking part in this quiz  !!</p>
+                <a href="{% url 'leaderboard' %}">View Leaderboard</a>
+
+            </div>
+        </div>
+    </div>
+ 
+</div>
+ 
+{% endblock %}
+
+

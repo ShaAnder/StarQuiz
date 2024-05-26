@@ -6,43 +6,181 @@ body {
   margin: 0;
   padding: 0;
   color: white;
+  height: max-content;
 }
 
-#name-planet{
-    font-size: 2rem;
-    color: #D2B48C;
-    text-align: center;
-    padding-top: 3%;
+#name-planet {
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 3%;
 }
 
 h1 {
-    font-size: 2rem;
-    color: #D2B48C;
-    text-align: center;
-    padding-top: 3%;
+  font-size: 2rem;
+  color: #d2b48c;
+  text-align: center;
+  padding-top: 3%;
 }
 
 .image-planet {
-    width: 30%;
-    right: 2%;
-    top: 5%;
-    position: absolute;
+  width: 40%;
+  left: 2%;
+  left: 0%;
+  position: absolute;
+  margin-bottom: 10%;
 }
 
 .info-planet {
-    padding: 4%;
-    margin: 2%;
-    background-color: #000020;
-    position: static;
-    width: 70%;
+  display: block;
+  padding: 4%;
+  margin: 10% 2% 10% 2%;
+  position: relative;
+  max-width: 100%;
 }
 
-/* Specific styles for planets */
-.text-tatooine {
-    color: #D2B48C;
+.text-planet {
+  top: 5%;
 }
 
+.image-character {
+  width: 40%;
+  right: 2%;
+  top: 2%;
+  position: absolute;
+}
+
+/* Styles for speech bubble */
+.speech {
+  margin: 5% 5% 20% 5%;
+  position: relative;
+  font-size: 1.4rem;
+  border-radius: 35px;
+  padding: 5% 10% 5% 10%;
+  text-align: center;
+  width: fit-content;
+}
+
+.speech:before {
+  content: "";
+  position: absolute;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  right: -20px;
+  bottom: 50px;
+}
+
+/* Specific styles for planets gradient */
 .gradient-tatooine {
-    background: linear-gradient(132deg, #8B4513, #D2B48C);
-    max-width: 100%;
+  background: linear-gradient(45deg, #8b4513, #d2b48c);
+  max-width: 100%;
+}
+
+.gradient-hoth {
+  background: linear-gradient(45deg, #d3d3d3, #add8e6);
+}
+
+.gradient-dagobah {
+    background: linear-gradient(45deg, #4682B4, #6B8E23);
+}
+
+.gradient-yavin {
+    background: linear-gradient(45deg, #A9A9A9, #6B8E23);
+}
+
+.gradient-deathstar {
+    background: linear-gradient(45deg, #110e09, #494949);
+}
+
+.gradient-endor {
+    background: linear-gradient(45deg, #87CEEB, #228B22);
+}
+
+.gradient-bespin {
+    background: linear-gradient(45deg, #4d4b3f, #c4c48b);
+}
+
+/* Specific styles for planets text */
+.text-tatooine {
+  color: #8b4513;
+}
+
+.text-hoth, .text-yavin {
+  color: #f0f8ff;
+}
+
+.text-dagobah {
+    color: #80b7e4;
+}
+
+.text-deathstar {
+    color: #cec9b7;
+}
+
+.text-endor {
+    color: #87CEEB;
+}
+
+.text-bespin {
+    color: #c4c48b;
+}
+
+/* Specific styles for planets speech bubbles */
+.speech-hoth, .info-hoth, .speech-yavin,
+.info-yavin {
+  background: #4682b4;
+}
+
+.speech-hoth:before, .speech-yavin:before {
+  border-left: 20px solid #4682b4;
+  border-top: 20px solid #4682b4;
+}
+
+.speech-tatooine,
+.info-tatooine {
+  background: #87ceeb;
+}
+
+.speech-tatooine:before {
+  border-left: 20px solid #87ceeb;
+  border-top: 20px solid #87ceeb;
+}
+
+.speech-dagobah,
+.info-dagobah {
+  background: #8B4513;
+}
+
+.speech-dagobah:before {
+  border-left: 20px solid #8B4513;
+  border-top: 20px solid #8B4513;
+}
+
+.speech-deathstar,
+.info-deathstar {
+  background: #1f1814;
+}
+
+.speech-deathstar:before {
+  border-left: 20px solid #1f1814;
+  border-top: 20px solid #1f1814;
+}
+
+.speech-endor,
+.info-endor {
+  background: #556B2F;
+}
+
+.speech-endor:before {
+  border-left: 20px solid #556B2F;
+  border-top: 20px solid #556B2F;
+}
+
+.speech-bespin,
+.info-bespin {
+  background: #4e4b3b;
+}
+
+.speech-bespin:before {
+  border-left: 20px solid #4e4b3b;
+  border-top: 20px solid #4e4b3b;
 }

@@ -1,0 +1,27 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+ 
+{% block content %}
+ 
+<div class="container">
+        
+    <div class="card-columns p-10 m-10">
+        <div class="w-3 flex items-center border-4 border-black">
+            <div class="">
+                <h5 class="">Leaderboard</h5>
+                <ul>
+                    {% for quiz in quizzes %}
+                    <li>{{ quiz.user.username }} - {{ quiz.score }}</li>
+                    {% endfor %}
+                </ul>
+            <a href="{% url 'quiz' %}">Take the Quiz Again</a>
+
+            </div>
+        </div>
+    </div>
+ 
+</div>
+ 
+{% endblock %}

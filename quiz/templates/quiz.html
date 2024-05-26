@@ -1,0 +1,7 @@
+
+<h1>{{ question.question }}</h1>
+<form method="post" action="{% url 'quiz' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit Answer</button>
+</form>
