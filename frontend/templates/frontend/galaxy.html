@@ -4,24 +4,26 @@
 
 {% block content %}
 {% block extra_css %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/title.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/galaxy.css' %}">
 {% endblock extra_css %}
+
     <header id="galaxy header">
         <h1>Galaxy Map</h1>
         <p>The world of StarWars awaites you padawan</p>
-        <ul>
-            {% for planet in planets %}
-                <li>
-                    <a href="{% url 'planet_detail' planet.id %}">
-                        <img src="{{ planet.image.url }}" alt="{{ planet.name }}" style="width:100px;height:100px;">
-                        {{ planet.name }}
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
     </header>
 
-    <hr>
+    <div class="galaxy-container">
+        {% for planet in planets %}
+            <div class="planet-item">
+                <a href="{% url 'planet_detail' planet.id %}">
+                    <img src="{{ planet.image.url }}" alt="{{ planet.name }}" style="width:100px;height:100px;">
+                    <br>
+                    <span>{{ planet.name }}</span>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+
 <!-- 
     <nav>
         <a href="#g-home" aria-label="Go back to the Galaxy Map">Back to the Galaxy</a>
@@ -35,12 +37,12 @@
         <a href="#plan-8" aria-label="Fly to Alderaan">Alderaan</a>
     </nav> -->
 
-    
-   
+
 
  
 {%block js%}
 <script src="{% static 'js/galaxy.js'%}" alt="Star Wars Inspired star quiz scroll screen logo img "></script>
+<script src="{% static 'js/helpers/galaxyRandomizer.js'%}" alt="Star Wars Inspired star quiz scroll screen logo img "></script>
 {%endblock js%}
 {% endblock %}
        
