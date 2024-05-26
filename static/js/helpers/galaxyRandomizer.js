@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var containerWidth = container.clientWidth;
     var containerHeight = container.clientHeight;
     var numPlanets = planets.length;
-    var radius = Math.min(containerWidth, containerHeight) * 0.3; // Adjust the radius to make the circle smaller
+    var radius = Math.min(containerWidth, containerHeight) * 0.3;
     var angleIncrement = (2 * Math.PI) / numPlanets;
 
     planets.forEach(function(planet, index) {

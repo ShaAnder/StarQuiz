@@ -1,4 +1,4 @@
-const stars = 500; // Adjust the number of stars as needed
+const stars = 500;
 
 for (let i = 0; i < stars; i++) {
     let star = document.createElement("div");
