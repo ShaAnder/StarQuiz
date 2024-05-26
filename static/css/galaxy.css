@@ -4,9 +4,9 @@
 @media only screen and (min-width: 768px) {
   /* tablets and desktop */
 
-  body {
+  .galaxy-container-main {
     background-color: black;
-    overflow: hidden !important;
+    overflow: hidden;
 
     .stars {
         position: absolute;

@@ -4,13 +4,7 @@
 @media only screen and (min-width: 768px) {
   /* tablets and desktop */
 
-  body {
-    background-color: black;
-    overflow: hidden !important;
-
-  }
-
-  body::after {
+  .title-container::after {
     content: "";
     position: fixed;
     top: 0;
@@ -201,22 +195,6 @@
     transform: translate(-50%, -50%);
     z-index: 2;
     width: 100%;
-    animation: startAdventure 70s;
-  }
-
-
-  @keyframes startAdventure {
-    0% {
-      opacity: 0;
-    }
-
-    99% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
   }
 
   #audio-intro {
