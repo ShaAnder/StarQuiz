@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.neon-border {
+    position: relative;
+    border: 2px solid transparent;
+    box-shadow: 0 0 10px #FDE047, 0 0 20px #FDE047, 0 0 30px #FDE047, 0 0 40px #FDE047;
+    animation: neon-border-animation 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-border-animation {
+    from {
+        border-color: transparent;
+    }
+    to {
+        border-color: #FDE047;
+    }
+}
+
+.container {
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    outline: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.form-input:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #FDE047;
+}
