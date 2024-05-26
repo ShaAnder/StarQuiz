@@ -8,50 +8,55 @@
 
   <div class="plant-detail-container gradient-{{ planet.name|css_class }}">
     <div>
-      <div class="speech speech-{{ planet.name|css_class }}">
-        <h1 class="text-{{ planet.name|css_class }}">Welcome to<br>
+      <div class="speech speech-{{ planet.name|css_class }} top-2 mb-10 w-1/2">
+        <h1 class="welcome text-{{ planet.name|css_class }}">Welcome to<br>
           <div class="uppercase font-bold">{{ planet.name }}</div>
         </h1>
-
-        <img class="image-planet" src="{{ planet.image.url }}" alt="{{ planet.name }}" />
-        
       </div>
       {% for character in characters %}
-      <div>
-        <img class="image-character" src="{{ character.image.url }}" alt="{{ character.name }}" />
+      <div class="w-1/2">
+        <img class="image-character max-w-96" src="{{ character.image.url }}" alt="{{ character.name }}" />
       </div>
       {% endfor %}
-      <div class="info info-{{ planet.name|css_class }} rounded-lg">
+    </div>
+    <div class="grid grid-cols-12 gap-4 mt-2">
+      <div class="info info-{{ planet.name|css_class }} rounded-lg col-span-12 md:col-span-6 mx-3 my-8 p-4">
         <div class="text-{{ planet.name|css_class }} top-5">
-          <h2 class="uppercase">About {{ planet.name }}</h2>
-          <p>{{ planet.description }}</p>
+          <h2 class="about uppercase">About {{ planet.name }}</h2>
+          <p class="text text-{{ planet.name|css_class }}">{{ planet.description }}</p>
         </div>
       </div>
       {% for character in characters %}
-      <div class="info info-{{ planet.name|css_class }} rounded-lg">
+      <div class="info info-{{ planet.name|css_class }} rounded-lg col-span-12 md:col-span-6 mx-3 my-8 p-4">
         <div class="text-{{ planet.name|css_class }} top-5">
-          <h2 class="uppercase">Who is {{ character.name }}</h2>
-          <p>{{ character.bio }}</p>
+          <h2 class="about uppercase">Who is {{ character.name }}</h2>
+          <p class="text text-{{ planet.name|css_class }}">{{ character.bio }}</p>
         </div>
       </div>
       {% endfor %}
+    </div>
 
-      <div class="info info-{{ planet.name|css_class }} rounded-lg">
+    <div class="grid grid-cols-12 gap-4 mt-2">
+      <div class="info info-{{ planet.name|css_class }} rounded-lg col-span-12 md:col-span-6 mx-3 my-8 p-4">
         <div class="text-{{ planet.name|css_class }} top-5">
-            <h2 class="uppercase">Trivia</h2>
-            <ul>
-                {% for item in trivia %}
-                <li>
-                    <strong>Q:</strong> {{ item.question }}<br>
-                    <strong>A:</strong> {{ item.answer }}
-                </li>
-                {% endfor %}
-            </ul>
+          <h2 class="about uppercase">Trivia</h2>
+          <ul>
+            {% for item in trivia %}
+              <li>
+                <strong>Q:</strong> {{ item.question }}<br>
+                <strong>A:</strong> {{ item.answer }}
+              </li>
+            {% endfor %}
+          </ul>
         </div>
+      </div>
+      <div class="col-span-12 md:col-span-6 mx-3 my-2">
+        <img class="max-w-64 relative" src="{{ planet.image.url }}" alt="{{ planet.name }}" />
+      </div>
     </div>
-      <button class="button-return rounded-lg content-center">
-        <a href="{% url 'galaxy_map'%}" onclick="checkVisited()">return to galaxy</a>
-      </button>
-    </div>
+    <button class="button-return rounded-lg content-center">
+      <a href="{% url 'galaxy_map'%}" onclick="checkVisited()">return to galaxy</a>
+    </button>
+  </div>
 
 {% endblock %}
