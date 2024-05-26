@@ -3,13 +3,16 @@
 {% load static %}
 
 {% block content %}
-    <header id="g-home">
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/title.css' %}">
+{% endblock extra_css %}
+    <header id="galaxy header">
         <h1>Galaxy Map</h1>
         <p>The world of StarWars awaites you padawan</p>
     </header>
 
     <hr>
-
+<!-- 
     <nav>
         <a href="#g-home" aria-label="Go back to the Galaxy Map">Back to the Galaxy</a>
         <a href="#lhp" aria-label="Fly to Tatooine">Tatooine</a>
@@ -20,254 +23,15 @@
         <a href="#plan-6" aria-label="Fly to Mustafar">Mustafar</a>
         <a href="#plan-7" aria-label="Fly to Dagobar">Dagobar</a>
         <a href="#plan-8" aria-label="Fly to Alderaan">Alderaan</a>
-    </nav>
+    </nav> -->
 
-    <section id="lhp">
-        <div>
-            <h2>Tatooine</h2>
-            <table>
-                <tr>
-                    <th>Tatoonie</th>
-                    <th>Fact Name</th>
-                    <th>Characters</th>
-                    <th>Fact Bodies</th>
-                </tr>
-                <tr>
-                    <td>input data here</td>
-                    <td>input data here</td>
-                    <td>input data here</td>
-                </tr>
-            </table>
-            <br>
-            <form action="URL" method="POST">
-                <!--insert URL location of where form is being sent to-->
-                <label for="Question-field-1">Question I insert questions here?</label>
-                <input placeholder="your answer">
-                <br>
-                <label for="Question-field-2">Question II insert questions here?</label>
-                <input placeholder="your answer">
-                <br>
-                <label for="Question-field-3">Question III what are Darthvaders favourite socks?</label>
-                <input placeholder="your answer">
-            </form>
-        </div>
-    </section>
+    
+   
 
-    <section id="plan-2">
-        <div>
-            <h2>Hoth</h2>
-            <table>
-                <tr>
-                    <th>Hoth</th>
-                    <th>Fact Name</th>
-                    <th>Characters</th>
-                    <th>Fact Bodies</th>
-                </tr>
-                <tr>
-                    <td>input data here</td>
-                    <td>input data here</td>
-                    <td>input data here</td>
-                </tr>
-            </table>
-            <br>
-            <form action="URL" method="POST">
-                <!--insert URL location of where form is being sent to-->
-                <label for="Question-field-1">Question I insert questions here?</label>
-                <input placeholder="your answer">
-                <br>
-                <label for="Question-field-2">Question II insert questions here?</label>
-                <input placeholder="your answer">
-                <br>
-                <label for="Question-field-3">Question III what are Darthvaders favourite socks?</label>
-                <input placeholder="your answer">
-            </form>
-
-        </div>
-    </section>
-
-    <section id="plan-3">
-        <div>
-            <h2>Endor</h2>
-            <table>
-                <tr>
-                    <th>Endor</th>
-                    <th>Fact Name</th>
-                    <th>Characters</th>
-                    <th>Fact Bodies</th>
-                </tr>
-                <tr>
-                    <td>input data here</td>
-                    <td>input data here</td>
-                    <td>input data here</td>
-                </tr>
-            </table>
-            <br>
-            <form action="URL" method="POST">
-                <!--insert URL location of where form is being sent to-->
-                <label for="Question-field-1">Question I insert questions here?</label>
-                <input placeholder="your answer">
-                <br>
-                <label for="Question-field-2">Question II insert questions here?</label>
-                <input placeholder="your answer">
-                <br>
-                <label for="Question-field-3">Question III what are Darthvaders favourite socks?</label>
-                <input placeholder="your answer">
-            </form>
-        </div>
-    </section>
-
-    <section id="plan-4">
-        <div>
-            <h2>Coruscant</h2>
-            <table>
-                <tr>
-                    <th>Coruscant</th>
-                    <th>Fact Name</th>
-                    <th>Characters</th>
-                    <th>Fact Bodies</th>
-                </tr>
-                <tr>
-                    <td>input data here</td>
-                    <td>input data here</td>
-                    <td>input data here</td>
-                </tr>
-            </table>
-            <br>
-            <form action="URL" method="POST">
-                <!--insert URL location of where form is being sent to-->
-                <label for="Question-field-1">Question I insert questions here?</label>
-                <input placeholder="your answer">
-                <br>
-                <label for="Question-field-2">Question II insert questions here?</label>
-                <input placeholder="your answer">
-                <br>
-                <label for="Question-field-3">Question III what are Darthvaders favourite socks?</label>
-                <input placeholder="your answer">
-            </form>
-        </div>
-    </section>
-
-    <section id="plan-5">
-        <div>
-            <h2>Naboo</h2>
-            <table>
-                <tr>
-                    <th>Naboo</th>
-                    <th>Fact Name</th>
-                    <th>Characters</th>
-                    <th>Fact Bodies</th>
-                </tr>
-                <tr>
-                    <td>input data here</td>
-                    <td>input data here</td>
-                    <td>input data here</td>
-                </tr>
-            </table>
-            <br>
-            <form action="URL" method="POST">
-                <!--insert URL location of where form is being sent to-->
-                <label for="Question-field-1">Question I insert questions here?</label>
-                <input placeholder="your answer">
-                <br>
-                <label for="Question-field-2">Question II insert questions here?</label>
-                <input placeholder="your answer">
-                <br>
-                <label for="Question-field-3">Question III what are Darthvaders favourite socks?</label>
-                <input placeholder="your answer">
-            </form>
-        </div>
-    </section>
-
-    <section id="plan-6">
-        <div>
-            <h2>Mustafar</h2>
-            <table>
-                <tr>
-                    <th>Mustafar</th>
-                    <th>Fact Name</th>
-                    <th>Characters</th>
-                    <th>Fact Bodies</th>
-                </tr>
-                <tr>
-                    <td>input data here</td>
-                    <td>input data here</td>
-                    <td>input data here</td>
-                </tr>
-            </table>
-            <br>
-            <form action="URL" method="POST">
-                <!--insert URL location of where form is being sent to-->
-                <label for="Question-field-1">Question I insert questions here?</label>
-                <input placeholder="your answer">
-                <br>
-                <label for="Question-field-2">Question II insert questions here?</label>
-                <input placeholder="your answer">
-                <br>
-                <label for="Question-field-3">Question III what are Darthvaders favourite socks?</label>
-                <input placeholder="your answer">
-            </form>
-        </div>
-    </section>
-
-    <section id="plan-7">
-        <div>
-            <h2>Dagobar</h2>
-            <table>
-                <tr>
-                    <th>Dagobar</th>
-                    <th>Fact Name</th>
-                    <th>Characters</th>
-                    <th>Fact Bodies</th>
-                </tr>
-                <tr>
-                    <td>input data here</td>
-                    <td>input data here</td>
-                    <td>input data here</td>
-                </tr>
-            </table>
-            <br>
-            <form action="URL" method="POST">
-                <!--insert URL location of where form is being sent to-->
-                <label for="Question-field-1">Question I insert questions here?</label>
-                <input placeholder="your answer">
-                <br>
-                <label for="Question-field-2">Question II insert questions here?</label>
-                <input placeholder="your answer">
-                <br>
-                <label for="Question-field-3">Question III what are Darthvaders favourite socks?</label>
-                <input placeholder="your answer">
-            </form>
-        </div>
-    </section>
-
-    <section id="plan-8">
-        <div>
-            <h2>Alderaan</h2>
-            <table>
-                <tr>
-                    <th>Alderaan</th>
-                    <th>Fact Name</th>
-                    <th>Characters</th>
-                    <th>Fact Bodies</th>
-                </tr>
-                <tr>
-                    <td>input data here</td>
-                    <td>input data here</td>
-                    <td>input data here</td>
-                </tr>
-            </table>
-            <br>
-            <form action="URL" method="POST">
-                <!--insert URL location of where form is being sent to-->
-                <label for="Question-field-1">Question I insert questions here?</label>
-                <input placeholder="your answer">
-                <br>
-                <label for="Question-field-2">Question II insert questions here?</label>
-                <input placeholder="your answer">
-                <br>
-                <label for="Question-field-3">Question III what are Darthvaders favourite socks?</label>
-                <input placeholder="your answer">
-            </form>
-        </div>
-    </section>
+ 
+{%block js%}
+<script src="{% static 'js/galaxy.js'%}" alt="Star Wars Inspired star quiz scroll screen logo img "></script>
+{%endblock js%}
 {% endblock %}
+       
+
