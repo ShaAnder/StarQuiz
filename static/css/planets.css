@@ -12,18 +12,22 @@
 }
 
 /* titles */
-h1 {
+.welcome {
   font-size: 2rem;
   text-align: center;
   padding-top: 3%;
-  font-weight: bolder;
 }
 
-h2 {
+.about {
   font-size: 1.5rem;
   text-align: center;
   padding-top: 2%;
   font-weight: bold;
+}
+
+.text {
+  font-size: 1.1rem;
+  font-weight: normal;
 }
 
 .planet {
@@ -33,20 +37,9 @@ h2 {
   z-index: 2;
 }
 
-/* images for planet */
-.image-planet {
-  width: 60%;
-  left: 2%;
-  left: 0%;
-  position: absolute;
-  margin-bottom: 10%;
-}
-
 /* bloc with description and bio */
 .info {
   display: block;
-  padding: 4%;
-  margin: 10% 2% 10% 2%;
   max-width: 100%;
 }
 
@@ -65,7 +58,7 @@ h2 {
   padding: 2%;
   transform: translateX(-50%);
   background: #000;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   cursor: pointer;
   left: 50%;
 }
@@ -104,7 +97,7 @@ h2 {
     background: linear-gradient(45deg, #4682B4, #6B8E23);
 }
 
-.gradient-yavin {
+.gradient-yavin4 {
     background: linear-gradient(45deg, #A9A9A9, #6B8E23);
 }
 
@@ -125,7 +118,7 @@ h2 {
   color: #8b4513;
 }
 
-.text-hoth, .text-yavin {
+.text-hoth, .text-yavin4 {
   color: #f0f8ff;
 }
 
@@ -146,12 +139,12 @@ h2 {
 }
 
 /* Specific styles for planets speech bubbles */
-.speech-hoth, .info-hoth, .speech-yavin,
-.info-yavin {
+.speech-hoth, .info-hoth, .speech-yavin4,
+.info-yavin4 {
   background: #4682b4;
 }
 
-.speech-hoth:before, .speech-yavin:before {
+.speech-hoth:before, .speech-yavin4:before {
   border-left: 20px solid #4682b4;
   border-top: 20px solid #4682b4;
 }

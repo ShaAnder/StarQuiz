@@ -7,7 +7,6 @@
 {% element h1 %}
 {% trans "Sign Out" %}
 {% endelement %}
-{% if not SOCIALACCOUNT_ONLY %}
 {% setvar link %}
 <a href="{{ logout_url }}">
     {% endsetvar %}
