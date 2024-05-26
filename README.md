@@ -25,16 +25,16 @@ This is a fun interactive quiz where users get to experience the many planets of
 ### Characters
 
 - Luke Skywalker![](luke.png)
-- Princess Leia ![](leia.png)
-- Han Solo ![](hansSolo.png)
-- Chewbacca ![](chewy.png)
-- C-3PO ![](c3PO.png)
-- R2-D2 ![](R2D2.png)
-- Obi-Wan Kenobi ![](obiWan.png)
-- Yoda ![](yoda.png)
+- Princess Leia![](leia.png)
+- Han Solo![](hansSolo.png)
+- Chewbacca![](chewy.png)
+- C-3PO![](c3PO.png)
+- R2-D2![](R2D2.png)
+- Obi-Wan Kenobi![](obiWan.png)
+- Yoda![](yoda.png)
 - Lando Calrissian![](Landonis.png)
-- Darth Vader ![](darth-vader.png)
-- Ewok ![](ewok.png)
+- Darth Vader![](darth-vader.png)
+- Ewok![](ewok.png)
 
 ### Live Link
 
