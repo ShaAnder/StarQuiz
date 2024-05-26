@@ -19,5 +19,5 @@ header {
   height: 30px;
   background-color: white;
   width: 100%;
-  z-index: 10;
+  /* z-index: 10; */
 }

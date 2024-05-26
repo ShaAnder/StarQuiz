@@ -5,20 +5,18 @@
 {% load filters %}
 
 {% block content %}
-
   <div class="plant-detail-container gradient-{{ planet.name|css_class }}">
-    <div>
+    <div class="flex items-center">
       <div class="speech speech-{{ planet.name|css_class }} top-2 mb-10 w-1/2">
         <h1 class="welcome text-{{ planet.name|css_class }}">Welcome to<br>
           <div class="uppercase font-bold">{{ planet.name }}</div>
         </h1>
       </div>
-      {% for character in characters %}
       <div class="w-1/2">
-        <img class="image-character max-w-96" src="{{ character.image.url }}" alt="{{ character.name }}" />
+        <img class="image-character max-w-96" src="{{ characters.0.image.url }}" alt="{{ characters.0.name }}" />
       </div>
-      {% endfor %}
     </div>
+    
     <div class="grid grid-cols-12 gap-4 mt-2">
       <div class="info info-{{ planet.name|css_class }} rounded-lg col-span-12 md:col-span-6 mx-3 my-8 p-4">
         <div class="text-{{ planet.name|css_class }} top-5">
@@ -58,5 +56,4 @@
       <a href="{% url 'galaxy_map'%}" onclick="checkVisited()">return to galaxy</a>
     </button>
   </div>
-
 {% endblock %}
