@@ -1,6 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 
+#startAdventure {
+  position: absolute;
+  border: 1px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 50%;
+  font-size: x-large;
+}
+
 @media only screen and (min-width: 768px) {
   /* tablets and desktop */
 
@@ -184,17 +195,6 @@
     z-index: 2;
     width: 100%;
     animation: startAdventure 60s;
-  }
-
-  #startAdventure {
-    position: absolute;
-    border: 1px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 100%;
-    font-size: x-large;
   }
 
   #audio-intro {

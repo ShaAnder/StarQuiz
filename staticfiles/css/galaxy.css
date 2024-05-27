@@ -24,23 +24,17 @@ h1.uppercase {
   font-size: 3rem;
 }
 
-p {
-  margin-top: -10px;
-}
-
 .title {
   font-size: 4rem;
   text-align: center;
   padding-top: 3%;
   font-weight: bold;
-  color: yellow;
   text-shadow: 0.3rem 0.3rem 0.3rem rgb(199, 191, 191, 0.4);
 }
 
 p {
   font-size: 1rem;
   font-weight: bold;
-  color: yellow;
 }
 
 .planet-name {
