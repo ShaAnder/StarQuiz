@@ -12,6 +12,22 @@
   font-size: x-large;
 }
 
+#to-galaxy-map {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fdd835;
+  color: #212121;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  z-index: 999;
+}
+
+#to-galaxy-map:hover {
+  background-color: #ffee58;
+}
+
 @media only screen and (min-width: 768px) {
   /* tablets and desktop */
 
@@ -200,5 +216,12 @@
   #audio-intro {
     position: absolute;
     z-index: 2;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #to-galaxy-map {
+    padding: 8px 16px;
+    font-size: 14px;
   }
 }
