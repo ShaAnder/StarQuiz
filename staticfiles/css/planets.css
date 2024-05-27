@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* General styles */
+.plant-detail-container {
+  font-family: "Roboto";
+  margin: 0;
+  padding: 0;
+  color: white;
+  max-width: 100%;
+  
+}
+
+/* titles */
+.welcome {
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 3%;
+}
+
+.about {
+  font-size: 1.5rem;
+  text-align: center;
+  padding-top: 2%;
+  font-weight: bold;
+}
+
+.text {
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+.planet {
+  position:absolute;
+  width:1px;
+  height: 1px;
+  z-index: 2;
+}
+
+/* bloc with description and bio */
+.info {
+  display: block;
+  max-width: 100%;
+}
+
+/* images for characters */
+.image-character {
+  width: 40%;
+  right: 2%;
+  top: 2%;
+  position: absolute;
+}
+
+/* Return button to quit the page */
+.button-return {
+  position: relative;
+  margin: 2%;
+  padding: 2%;
+  transform: translateX(-50%);
+  background: #000;
+  font-size: 0.9rem;
+  cursor: pointer;
+  left: 50%;
+}
+
+/* Styles for speech bubble */
+.speech {
+  margin: 5% 5% 20% 5%;
+  position: relative;
+  font-size: 1.4rem;
+  border-radius: 35px;
+  padding: 5% 10% 5% 10%;
+  text-align: center;
+  width: fit-content;
+}
+
+.speech:before {
+  content: "";
+  position: absolute;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  right: -20px;
+  bottom: 50px;
+}
+
+/* Specific styles for planets gradient */
+.gradient-tatooine {
+  background: linear-gradient(45deg, #8b4513, #d2b48c);
+  max-width: 100%;
+}
+
+.gradient-hoth {
+  background: linear-gradient(45deg, #d3d3d3, #add8e6);
+}
+
+.gradient-dagobah {
+    background: linear-gradient(45deg, #4682B4, #6B8E23);
+}
+
+.gradient-yavin4 {
+    background: linear-gradient(45deg, #A9A9A9, #6B8E23);
+}
+
+.gradient-deathstar {
+    background: linear-gradient(45deg, #110e09, #494949);
+}
+
+.gradient-endor {
+    background: linear-gradient(45deg, #87CEEB, #228B22);
+}
+
+.gradient-bespin {
+    background: linear-gradient(45deg, #4d4b3f, #c4c48b);
+}
+
+/* Specific styles for planets text */
+.text-tatooine {
+  color: #8b4513;
+}
+
+.text-hoth, .text-yavin4 {
+  color: #f0f8ff;
+}
+
+.text-dagobah {
+    color: #80b7e4;
+}
+
+.text-deathstar {
+    color: #cec9b7;
+}
+
+.text-endor {
+    color: #87CEEB;
+}
+
+.text-bespin {
+    color: #c4c48b;
+}
+
+/* Specific styles for planets speech bubbles */
+.speech-hoth, .info-hoth, .speech-yavin4,
+.info-yavin4 {
+  background: #4682b4;
+}
+
+.speech-hoth:before, .speech-yavin4:before {
+  border-left: 20px solid #4682b4;
+  border-top: 20px solid #4682b4;
+}
+
+.speech-tatooine,
+.info-tatooine {
+  background: #87ceeb;
+}
+
+.speech-tatooine:before {
+  border-left: 20px solid #87ceeb;
+  border-top: 20px solid #87ceeb;
+}
+
+.speech-dagobah,
+.info-dagobah {
+  background: #8B4513;
+}
+
+.speech-dagobah:before {
+  border-left: 20px solid #8B4513;
+  border-top: 20px solid #8B4513;
+}
+
+.speech-deathstar,
+.info-deathstar {
+  background: #1f1814;
+}
+
+.speech-deathstar:before {
+  border-left: 20px solid #1f1814;
+  border-top: 20px solid #1f1814;
+}
+
+.speech-endor,
+.info-endor {
+  background: #556B2F;
+}
+
+.speech-endor:before {
+  border-left: 20px solid #556B2F;
+  border-top: 20px solid #556B2F;
+}
+
+.speech-bespin,
+.info-bespin {
+  background: #4e4b3b;
+}
+
+.speech-bespin:before {
+  border-left: 20px solid #4e4b3b;
+  border-top: 20px solid #4e4b3b;
+}

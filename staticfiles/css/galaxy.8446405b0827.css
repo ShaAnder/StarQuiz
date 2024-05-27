@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.galaxy-container-main {
+  background-color: black;
+  overflow: hidden !important;
+  font-family: "Roboto", sans-serif;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.galaxy-container {
+  margin-top: -60px;
+}
+
+header {
+  background-color: black;
+  text-align: center;
+  padding: 1%;
+  margin-top: -30px;
+}
+
+h1.uppercase {
+  font-size: 3rem;
+}
+
+p {
+  margin-top: -10px;
+}
+
+.title {
+  font-size: 4rem;
+  text-align: center;
+  padding-top: 3%;
+  font-weight: bold;
+  color: yellow;
+  text-shadow: 0.3rem 0.3rem 0.3rem rgb(199, 191, 191, 0.4);
+}
+
+p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: yellow;
+}
+
+.planet-name {
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 2px black;
+}
+
+
+@media only screen and (min-width: 768px) {
+  /* tablets and desktop */
+
+  .galaxy-container-main {
+    background-color: black;
+    overflow: hidden;
+
+    .stars {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        background-color: white;
+        z-index: 2;
+      }
+    
+
+  }
+
+  .galaxy-container {
+      position: relative;
+      width: 100%;
+      height:700px;
+  }
+  .planet-item {
+      position: absolute;
+  } 
+}
+
+#galaxy-header {
+  position: static;
+  height: auto;
+}
