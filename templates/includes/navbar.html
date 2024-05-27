@@ -8,12 +8,6 @@
                     <img src="{% static 'img/starquiz.png' %}" alt="Star quiz logo" class="h-11">
                 </a>
             </div>
-            <input type="checkbox" id="mobile-menu-toggle" class="hidden" />
-            <label for="mobile-menu-toggle" class="flex items-center sm:hidden">
-                <svg class="h-6 w-6 fill-current text-gray-400 hover:text-white">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2 6h20a1 1 0 110 2H2a1 1 0 110-2zm0-4h20a1 1 0 110 2H2a1 1 0 110-2zm0 8h20a1 1 0 110 2H2a1 1 0 110-2z"/>
-                </svg>
-            </label>
             <div class="hidden sm:block">
                 <div class="flex space-x-4">
                     <a href="{% url 'home' %}" class="text-white font-bold hover:text-yellow-300 rounded-md px-3 py-2 text-sm" aria-current="page">Home</a>
@@ -48,7 +42,6 @@
     </div>
 </nav>
 
-{%block js%}
-<script src="{% static 'js/navbar.js'%}"></script>
-
-{%endblock js%}
+{% block js %}
+<script src="{% static 'js/navbar.js' %}"></script>
+{% endblock js %}
