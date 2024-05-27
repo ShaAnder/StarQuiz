@@ -8,14 +8,18 @@ For [Code Institue](https://codeinstitute.net/) 's May Hackathon theme, Star War
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [About this project](#about-this-project)
-  - [Screenshot](#screenshot)
-  - [Link](#links)
-  - [Technologies used](#technologies-used)
-  - [What I learned](#what-i-learned)
-  - [Useful resources](#useful-resources)
-- [Authors](#authors)
+- [Team Jedi Juggernauts](#team-jedi-juggernauts)
+    - [Description](#description)
+  - [Table of contents](#table-of-contents)
+    - [About this project](#about-this-project)
+    - [Characters](#characters)
+    - [Live Link](#live-link)
+    - [Technologies Used](#technologies-used)
+    - [Resources](#resources)
+  - [Authors](#authors)
+    - [Roles:](#roles)
+    - [Backend:](#backend)
+    - [Frontend:](#frontend)
 
 ### About this project
 
@@ -34,7 +38,7 @@ This is a fun interactive quiz where users get to experience the many planets of
 
 ### Live Link
 
-- Live Site URL: []()
+- Live Site URL: [StarQuiz](https://jedi-path-quizventure.onrender.com)
 
 ### Technologies Used
 
