@@ -190,27 +190,17 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
-LOGIN_REDIRECT_URL = '/StarQuiz/frontend/templates/frontend/galaxy.html'
-LOGOUT_REDIRECT_URL = '/StarQuiz/frontend/templates/frontend/galaxy.html'
+LOGIN_REDIRECT_URL = '/StarQuiz/frontend/templates/frontend/galaxy/'
+LOGOUT_REDIRECT_URL = '/StarQuiz/frontend/templates/frontend/galaxy/'
 
 
 # AWS Configuration
-
 # S3 Bucket config
-"""
-if 'USE_AWS' in os.environ:
-    # cache control
-    AWS_S3_OBJECT_PARAMETERS = {
-        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
-        'CacheControl': 'max-age=94608000',
-    }
-"""
 # bucket config
 AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
