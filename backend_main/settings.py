@@ -67,7 +67,7 @@ MIDDLEWARE = [
     "allauth.account.middleware.AccountMiddleware",
 ]
 
-
+"""
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -100,7 +100,7 @@ LOGGING = {
         },
     }
 }
-
+"""
 
 ROOT_URLCONF = 'backend_main.urls'
 
