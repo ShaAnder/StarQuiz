@@ -7,12 +7,12 @@
 {% block content %}
   <div class="plant-detail-container gradient-{{ planet.name|css_class }}">
     <div class="flex items-center">
-      <div class="speech speech-{{ planet.name|css_class }} top-2 mb-10 w-1/2">
-        <h1 class="welcome text-{{ planet.name|css_class }}">Welcome to<br>
-          <div class="uppercase font-bold">{{ planet.name }}</div>
+      <div class="speech speech-{{ planet.name|css_class }} top-2 mb-10 w-3/5 py-10">
+        <h1 class="welcome text-{{ planet.name|css_class }} text-center">Welcome to<br>
+          <div class="uppercase font-bold text-center">{{ planet.name }}</div>
         </h1>
       </div>
-      <div class="w-1/2">
+      <div class="w-2/5">
         <img class="image-character max-w-96" src="{{ characters.0.image.url }}" alt="{{ characters.0.name }}" />
       </div>
     </div>
