@@ -46,11 +46,13 @@ def quiz(request):
 
 
 def save_quiz(user, score):
+    """This function saves the user and score"""
     quiz = Quiz(user=user, score=score)
     quiz.save()
 
 @login_required
 def quiz_result(request, score):
+    """This function renders the result of the quiz"""
     return render(request, 'quiz/quiz_result.html', {'score': score})
 
 @login_required

@@ -52,14 +52,16 @@
 
       <br><br>
 
-      <a class="w-1/2 bg-yellow-300 hover:bg-yellow-700 text-white font-bold p-5 px-4 rounded focus:outline-none focus:shadow-outline submit-btn"
-        href="{% url 'galaxy_map'%}">To Galaxy Map</a>
+      
     </div>
+
+    <a class="w-1/2 bg-yellow-300 hover:bg-yellow-700 text-white font-bold p-5 px-4 rounded focus:outline-none focus:shadow-outline submit-btn"
+        href="{% url 'galaxy_map'%}">To Galaxy Map</a>
 
   </div>
 
   {%block js%}
   <script src="{% static 'js/titleInit.js'%}" alt="Star Wars Inspired star quiz scroll screen logo img "></script>
   {%endblock js%}
-  
+
 {% endblock %}
