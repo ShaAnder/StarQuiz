@@ -13,9 +13,9 @@
 
 /* titles */
 .welcome {
-  font-size: 2rem;
-  text-align: center;
+  font-size: 1.9rem;
   padding-top: 3%;
+  z-index: 9999;
 }
 
 .about {
@@ -64,12 +64,12 @@
 }
 
 /* Styles for speech bubble */
+/* Inspired by https://stacklima.com/comment-creer-des-bulles-sans-images-en-utilisant-css/ */
 .speech {
   margin: 5% 5% 20% 5%;
   position: relative;
   font-size: 1.4rem;
   border-radius: 35px;
-  padding: 5% 10% 5% 10%;
   text-align: center;
   width: fit-content;
 }
