@@ -5,6 +5,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A Star Wars quiz website that takes you through a journey of planets visited by Luke Skywalker.">
+  <meta name="keywords" content="Galaxy, Spaceship / Spacecraft, Jedi,  Lightsaber,  Planet, The Empire, The Rebel Alliance, Stormtrooper ,
+  The Force, The Dark Side, Droid, Padawan, The original trilogy, Clones , Millennium Falcon, Death Star, Telekinesis, Ewok">
+  <meta name="author" content="Star Wars">
+
+  <!--CSS -->
   <link rel="stylesheet" type="text/css" href="{% static 'src/styles.css' %}" />
   <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css" />
   
@@ -17,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/quiz.css' %}" />
   {% endblock extra_css %}
 
-  <title>{% block title %}Jedi Juggernauts{% endblock %}</title>
+  <title> Star Quiz | {% block extra_title %} {% endblock %} </title>
 
   <script src="https://cdn.tailwindcss.com"></script>
 
