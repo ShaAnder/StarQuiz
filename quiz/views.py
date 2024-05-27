@@ -6,6 +6,7 @@ from quiz.models import Quiz
 
 @login_required
 def quiz(request):
+
     if 'question_index' not in request.session:
         request.session['question_index'] = 0
         request.session['score'] = 0
@@ -30,11 +31,19 @@ def quiz(request):
             if user_answer == question.answer:
                 request.session['score'] += 1
             request.session['question_index'] += 1
+
             return redirect('quiz')
 
     form = QuizForm(question=question)
 
-    return render(request, 'quiz/quiz.html', {'form': form, 'question': question})
+    context = {
+        'form': form,
+        'question': question,
+        'question_index': question_index,
+    }
+
+    return render(request, 'quiz/quiz.html', context)
+
 
 def save_quiz(user, score):
     quiz = Quiz(user=user, score=score)

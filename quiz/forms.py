@@ -7,6 +7,6 @@ class QuizForm(forms.Form):
         question = kwargs.pop('question', None)
         super(QuizForm, self).__init__(*args, **kwargs)
         for field in self.fields:
-            self.fields[field].widget.attrs['placeholder'] = 'Your Answer'
-            self.fields[field].widget.attrs['class'] = 'p-5 max-w-lg w-1/3 rounded'
+            self.fields[field].widget.attrs['placeholder'] = 'Your answer'
+            self.fields[field].widget.attrs['class'] = 'p-5 rounded text-white input-placeholder text-center font-bold bg-opacity-1'
         
