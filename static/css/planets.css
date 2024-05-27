@@ -64,6 +64,7 @@
 }
 
 /* Styles for speech bubble */
+/* Inspired by https://stacklima.com/comment-creer-des-bulles-sans-images-en-utilisant-css/ */
 .speech {
   margin: 5% 5% 20% 5%;
   position: relative;
