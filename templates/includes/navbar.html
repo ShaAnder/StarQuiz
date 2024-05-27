@@ -2,72 +2,53 @@
 
 <nav class="bg-gray-800">
     <div class="mx-auto px-2 sm:px-6 lg:px-8">
-      <div class="relative flex h-16 items-center justify-between">
-        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-          <!-- Mobile menu button-->
-          <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-            <span class="absolute -inset-0.5"></span>
-            <span class="sr-only">Open main menu</span>
-          </button>
-        </div>
-        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-
-          <div class="flex flex-shrink-0 items-center mr-auto">
-            <a href="{% url 'galaxy_map' %}" class="flex items-center space-x-2">
-                <img src="{% static 'img/starquiz.png' %}" alt="Star quiz logo" class="h-11">
-            </a>
-          </div>
-
-          <div class="hidden sm:ml-6 sm:block">
-
-            <div class="flex space-x-4">
-
-
-                <a href="{% url 'home' %}" class="text-white font-bold hover:text-yellow-300 rounded-md px-3 py-2 text-sm" aria-current="page">Home</a>
-                <a href="{% url 'galaxy_map' %}" class="text-white font-bold hover:text-yellow-300 rounded-md px-3 py-2 text-sm">Galaxy</a>
-                <a href="{% url 'quiz' %}" class="text-white font-bold hover:text-yellow-300 rounded-md px-3 py-2 text-sm">Quiz</a>
-                <a href="{% url 'leaderboard' %}" class="text-white font-bold hover:text-yellow-300 rounded-md px-3 py-2 text-sm">Leaderboard</a>
-                {% if user.is_authenticated %}
-                    <a href="{% url 'account_logout' %}" class="text-white font-bold hover:text-yellow-300 rounded-md px-3 py-2 text-sm">Logout</a>
-                {% else %}
-                    <a href="{% url 'account_signup' %}" class="text-white font-bold hover:text-yellow-300 rounded-md px-3 py-2 text-sm">Sign Up</a>
-                    <a href="{% url 'account_login' %}" class="text-white font-bold hover:text-yellow-300 rounded-md px-3 py-2 text-sm">Login</a>
-                {% endif %}
-            
-
+        <div class="relative flex h-16 items-center justify-between">
+            <div class="flex flex-shrink-0 items-center">
+                <a href="{% url 'galaxy_map' %}" class="flex items-center space-x-2">
+                    <img src="{% static 'img/starquiz.png' %}" alt="Star quiz logo" class="h-11">
+                </a>
             </div>
-          </div>
+            <input type="checkbox" id="mobile-menu-toggle" class="hidden" />
+            <label for="mobile-menu-toggle" class="flex items-center sm:hidden">
+                <svg class="h-6 w-6 fill-current text-gray-400 hover:text-white">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2 6h20a1 1 0 110 2H2a1 1 0 110-2zm0-4h20a1 1 0 110 2H2a1 1 0 110-2zm0 8h20a1 1 0 110 2H2a1 1 0 110-2z"/>
+                </svg>
+            </label>
+            <div class="hidden sm:block">
+                <div class="flex space-x-4">
+                    <a href="{% url 'home' %}" class="text-white font-bold hover:text-yellow-300 rounded-md px-3 py-2 text-sm" aria-current="page">Home</a>
+                    <a href="{% url 'galaxy_map' %}" class="text-white font-bold hover:text-yellow-300 rounded-md px-3 py-2 text-sm">Galaxy</a>
+                    <a href="{% url 'quiz' %}" class="text-white font-bold hover:text-yellow-300 rounded-md px-3 py-2 text-sm">Quiz</a>
+                    <a href="{% url 'leaderboard' %}" class="text-white font-bold hover:text-yellow-300 rounded-md px-3 py-2 text-sm">Leaderboard</a>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'account_logout' %}" class="text-white font-bold hover:text-yellow-300 rounded-md px-3 py-2 text-sm">Logout</a>
+                    {% else %}
+                        <a href="{% url 'account_signup' %}" class="text-white font-bold hover:text-yellow-300 rounded-md px-3 py-2 text-sm">Sign Up</a>
+                        <a href="{% url 'account_login' %}" class="text-white font-bold hover:text-yellow-300 rounded-md px-3 py-2 text-sm">Login</a>
+                    {% endif %}
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  
-    <!-- Mobile menu, show/hide based on menu state. -->
+
+    <!-- Mobile menu -->
     <div class="sm:hidden" id="mobile-menu">
-      <div class="space-y-1 px-2 pb-3 pt-2">
-        
-        <a href="{% url 'home' %}" class="text-white font-bold hover:text-yellow-300 rounded-md  px-3 py-2 text-base font-medium block" aria-current="page">Home</a>
-        <a href="{% url 'galaxy_map' %}" class="text-white font-bold hover:text-yellow-300 rounded-md px-3 py-2 text-base font-medium block">Galaxy</a>
-        <a href="{% url 'quiz' %}" class="text-white font-bold hover:text-yellow-300 rounded-md px-3 py-2 text-base font-medium block">Quiz</a>
-        <a href="{% url 'leaderboard' %}" class="text-white font-bold hover:text-yellow-300 rounded-md px-3 py-2 text-base font-medium block">Leaderboard</a>
-        {% if user.is_authenticated %}
-            <a href="{% url 'account_logout' %}" class="text-white font-bold hover:text-yellow-300 rounded-md px-3 py-2 text-base font-medium block">Logout</a>
-        {% else %}
-            <a href="{% url 'account_signup' %}" class="text-white font-bold hover:text-yellow-300 rounded-md px-3 py-2 text-base font-medium block">Sign Up</a>
-            <a href="{% url 'account_login' %}" class="text-white font-bold hover:text-yellow-300 rounded-md px-3 py-2 text-base font-medium block">Login</a>
-        {% endif %}
-      </div>
+        <div class="bg-gray-800 px-2 pt-2 pb-3 space-y-1">
+            <a href="{% url 'home' %}" class="text-white font-bold hover:text-yellow-300 block px-3 py-2 rounded-md text-base">Home</a>
+            <a href="{% url 'galaxy_map' %}" class="text-white font-bold hover:text-yellow-300 block px-3 py-2 rounded-md text-base">Galaxy</a>
+            <a href="{% url 'quiz' %}" class="text-white font-bold hover:text-yellow-300 block px-3 py-2 rounded-md text-base">Quiz</a>
+            <a href="{% url 'leaderboard' %}" class="text-white font-bold hover:text-yellow-300 block px-3 py-2 rounded-md text-base">Leaderboard</a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'account_logout' %}" class="text-white font-bold hover:text-yellow-300 block px-3 py-2 rounded-md text-base">Logout</a>
+            {% else %}
+                <a href="{% url 'account_signup' %}" class="text-white font-bold hover:text-yellow-300 block px-3 py-2 rounded-md text-base">Sign Up</a>
+                <a href="{% url 'account_login' %}" class="text-white font-bold hover:text-yellow-300 block px-3 py-2 rounded-md text-base">Login</a>
+            {% endif %}
+        </div>
     </div>
-  </nav>
+</nav>
 
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+{%block js%}
+<script src="{% static 'js/navbar.js'%}"></script>
 
-    nav a {
-        font-family: 'Roboto', sans-serif;
-        transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-        color: #FDE047;
-    }
-</style>
+{%endblock js%}
