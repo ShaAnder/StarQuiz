@@ -4,21 +4,38 @@
 {% load static %}
  
 {% block content %}
+
+{% include 'includes/navbar.html' %}
  
-<div class="">
-        
-    <div class="">
-        <div class="">
-            <div class="">
-                <h5 class="">Leaderboard</h5>
+    <div class="quiz-container">
 
-            <a class="" href="{% url 'quiz' %}">Take the Quiz Again</a>
+        <div class="text-center p-5 bg-opacity-50 bg-gray-900 border-yellow-300 border-8 shadow-lg rounded neon-border w-1/2 m-auto mt-32">
 
-            </div>
+            <h1 class="text-yellow-300 font-bold quiz-h1">Leaderboard</h1>
+
+
         </div>
+
+        <div class="text-center p-5 border-yellow-300 bg-opacity-50 bg-gray-900 border-8 shadow-lg rounded neon-border w-1/2 m-auto mt-32">
+
+            {% for quiz in quizzes %}
+
+            <p class="text-white quiz-h2 font-bold border-yellow-300 border-8 shadow-lg rounded neon-border">{{ quiz|capfirst }}</p>
+
+            <br>
+
+            {% endfor %}
+
+            <br><br>
+
+            <a class="w-1/2 bg-yellow-500 hover:bg-yellow-700 text-white font-bold p-5 px-4 rounded focus:outline-none focus:shadow-outline submit-btn" href="{% url 'quiz' %}">Take the Quiz Again</a>
+
+            <br><br>
+        </div>
+
+        <br><br>
+
     </div>
- 
-</div>
 
  
 {% endblock %}
