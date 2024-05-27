@@ -132,8 +132,8 @@ WSGI_APPLICATION = 'backend_main.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
 #if 'DATABASE_URL' in os.environ:
+
 DATABASES = {
     
     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
@@ -193,7 +193,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 MEDIA_URL = 'media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'

@@ -8,5 +8,5 @@ class QuizForm(forms.Form):
         super(QuizForm, self).__init__(*args, **kwargs)
         for field in self.fields:
             self.fields[field].widget.attrs['placeholder'] = 'Your answer'
-            self.fields[field].widget.attrs['class'] = 'p-5 rounded text-white input-placeholder text-center font-bold bg-opacity-1'
+            self.fields[field].widget.attrs['class'] = 'p-5 rounded text-black input-placeholder text-center font-bold bg-opacity-1'
         
